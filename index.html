@@ -2,43 +2,64 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>카카오톡 연결 중...</title>
-  <script>
-    window.onload = function () {
-      var ua = navigator.userAgent || navigator.vendor || window.opera;
-      var isAndroid = /android/i.test(ua);
-      var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-
-      if (isAndroid) {
-        // Android: intent 실행
-        setTimeout(function () {
-          window.location.href = "https://play.google.com/store/apps/details?id=com.kakao.talk";
-        }, 2000);
-        window.location.href = "intent://plusfriend/home/_mBxaJn#Intent;scheme=kakao;package=com.kakao.talk;end";
-      } else if (isIOS) {
-        // iOS: Safari에서 pf.kakao.com 링크 열기
-        window.location.href = "https://pf.kakao.com/_mBxaJn/chat";
-      }
-    };
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>제이앤느 문의하기</title>
   <style>
     body {
-      font-family: sans-serif;
       text-align: center;
+      font-family: 'Apple SD Gothic Neo', 'sans-serif';
       padding: 40px;
-      background: #fffdf5;
+      background-color: #fffbe6;
+    }
+    h1 {
+      font-size: 22px;
+      margin-top: 20px;
     }
     p {
+      font-size: 15px;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #000;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 26px;
+      background-color: #FEE500;
+      color: #000;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
       font-size: 16px;
-      color: #333;
       margin-top: 20px;
+    }
+    .dots {
+      font-size: 28px;
+      line-height: 1.2;
+      display: inline-block;
+    }
+    .dots div {
+      margin: 2px 0;
+    }
+    .tiktok {
+      font-weight: bold;
+      font-size: 17px;
     }
   </style>
 </head>
 <body>
-  <h2>카카오톡 연결 중입니다...</h2>
-  <p>잠시만 기다려 주세요 😊</p>
+  <div class="dots">
+    <div>•</div>
+    <div>•</div>
+    <div>•</div>
+  </div>
+  <h1>제이앤느 문의하기</h1>
+  <p>📱 현재 <span class="tiktok">TikTok</span> 앱에서는<br>
+     <span class="highlight">외부 앱 자동 연결이 차단</span>되어 있습니다.</p>
+  <p>👉 오른쪽 위 <span class="dots" style="font-size:16px; vertical-align:middle;"><div style="display:inline;">•</div><div style="display:inline;">•</div><div style="display:inline;">•</div></span> 버튼 → <span class="highlight">"기타 브라우저로 열기"</span><br>를 눌러주세요.</p>
+  <a class="button" href="https://pf.kakao.com/_mBxaJn/chat">👉 카카오톡으로 문의하기</a>
 </body>
 </html>
