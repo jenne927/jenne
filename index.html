@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>카카오톡 연결 중...</title>
+  <script>
+    window.onload = function () {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      var isAndroid = /android/i.test(ua);
+      var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+
+      if (isAndroid) {
+        setTimeout(function () {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.kakao.talk";
+        }, 2000);
+        window.location.href = "intent://plusfriend/home/_mBxaJn#Intent;scheme=kakao;package=com.kakao.talk;end";
+      } else if (isIOS) {
+        setTimeout(function () {
+          window.location.href = "https://apps.apple.com/kr/app/kakaotalk/id362057947";
+        }, 500);
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #fffdf5;
+    }
+    a {
+      padding: 12px 24px;
+      background: #FEE500;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    p.hint {
+      font-size: 16px;
+      margin-top: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>카카오톡 연결 중입니다...</h2>
+  <p class="hint">앱이 자동으로 열리지 않으면<br />
+    👉 오른쪽 위 <strong>⋮</strong> 버튼 → <strong>기타 브라우저로 열기</strong>를 눌러주세요!</p>
+
+  <a href="https://pf.kakao.com/_mBxaJn/chat">👉 수동으로 카카오톡 채널 열기</a>
+</body>
+</html>
