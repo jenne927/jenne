@@ -36,40 +36,17 @@
       font-size: 16px;
       margin-top: 20px;
     }
-    .tiktok {
-      font-weight: bold;
-      font-size: 17px;
-    }
     .dot-icon {
       font-size: 22px;
       vertical-align: middle;
     }
-    #tiktok-notice {
-      display: none;
-    }
   </style>
-  <script>
-    window.onload = function () {
-      var ua = navigator.userAgent.toLowerCase();
-      if (ua.includes("tiktok")) {
-        document.getElementById("tiktok-notice").style.display = "block";
-      } else {
-        // 인스타 또는 일반 브라우저면 카카오톡 자동 연결 시도
-        window.location.href = "intent://plusfriend/home/_mBxaJn#Intent;scheme=kakao;package=com.kakao.talk;end";
-        setTimeout(function () {
-          window.location.href = "https://pf.kakao.com/_mBxaJn/chat";
-        }, 2000);
-      }
-    };
-  </script>
 </head>
 <body>
   <h1>제이앤느 문의하기</h1>
-  <div id="tiktok-notice">
-    <p>📱 현재 <span class="tiktok">TikTok</span> 앱에서는<br>
-       <span class="highlight">외부 앱 자동 연결이 차단</span>되어 있습니다.</p>
-    <p>👉 오른쪽 위 <span class="dot-icon">⋮</span> 버튼 → <span class="highlight">"기타 브라우저로 열기"</span><br>를 눌러주세요.</p>
-    <a class="button" href="https://pf.kakao.com/_mBxaJn/chat">👉 카카오톡으로 문의하기</a>
-  </div>
+  <p>📱 현재 일부 앱에서는<br>
+     <span class="highlight">외부 앱 자동 연결이 차단</span>되어 있습니다.</p>
+  <p>👉 오른쪽 위 <span class="dot-icon">⋮</span> 버튼 → <span class="highlight">"기타 브라우저로 열기"</span><br>를 눌러주세요.</p>
+  <a class="button" href="https://pf.kakao.com/_mBxaJn/chat">👉 카카오톡으로 문의하기</a>
 </body>
 </html>
